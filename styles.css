@@ -125,26 +125,33 @@ div.bar .content {
 div.bar .content ul {
   display: flex;
   list-style: none;
+  height: 100%;
 }
 
 div.bar .content ul li {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 0 15px;
+  position: relative;
 }
 
 div.bar .content ul li.active::after {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 15px;
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #3bb9e3;
 }
 
 div.bar .content ul li span {
   color: #667580;
   font-size: 12px;
   font-weight: bold;
+  bottom: 0;
 }
 
 div.bar .content ul li strong {
@@ -152,4 +159,175 @@ div.bar .content ul li strong {
   font-size: 18px;
   font-weight: bold;
   margin-top: 2px;
+}
+
+div.bar .content ul li.active strong {
+  color: #3bb9e3;
+}
+
+div.bar .content .actions {
+  display: flex;
+}
+
+div.actions button {
+  height: 34px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+
+  font-weight: bold;
+  font-size: 14px;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
+  border-radius: 16px;
+  margin-right: 20px;
+}
+
+div.wrapper-content {
+  display: flex;
+}
+
+div.wrapper-content aside.profile {
+  width: 260px;
+}
+
+div.wrapper-content aside.profile img.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-top: -130px;
+}
+
+div.wrapper-content aside.profile h1 {
+  font-size: 21px;
+  color: #1f2226;
+  margin-top: 10px;
+}
+
+div.wrapper-content aside.profile span {
+  font-size: 14px;
+  color: #53626c;
+}
+
+div.wrapper-content aside.profile p {
+  font-size: 14px;
+  color: #1f2226;
+  margin-top: 15px;
+}
+
+div.wrapper-content aside.profile ul {
+  margin-top: 20px;
+  list-style: none;
+}
+
+div.wrapper-content aside.profile li.list {
+  font-size: 14px;
+  color: #657786;
+
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+div.wrapper-content aside.profile li.list:first-child {
+  margin: 0;
+}
+
+div.wrapper-content aside.profile li.list img {
+  margin-right: 10px;
+}
+
+div.wrapper-content aside.profile .widget {
+  margin-top: 20px;
+}
+
+div.wrapper-content aside.profile strong {
+  font-weight: normal;
+  color: #3bb9e3;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+div.wrapper-content aside.profile strong img {
+  margin-right: 5px;
+}
+
+div.wrapper-content aside.profile .followers ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.wrapper-content aside.profile .followers ul li {
+  width: 40px;
+  height: 40px;
+  background: #d0d5d9;
+  border-radius: 50%;
+  flex: 1 0 auto;
+  margin: 0 5px 10px 0;
+}
+
+div.wrapper-content aside.profile .images ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.wrapper-content aside.profile .images ul li {
+  width: 80px;
+  height: 80px;
+  background: #d0d5d9;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin: 0 5px 5px 0;
+}
+
+.wrapper-content .timeline {
+  flex-grow: 1;
+}
+
+div.wrapper-content aside.widgets {
+  width: 290px;
+  margin-top: 10px;
+}
+
+div.wrapper-content aside.widgets .widget {
+  background: #fff;
+  padding: 15px;
+}
+
+div.wrapper-content aside.widgets .widget .title {
+  display: flex;
+  align-items: baseline;
+}
+
+div.wrapper-content aside.widgets .widget .title strong {
+  font-size: 18px;
+  color: #1f2226;
+}
+
+div.wrapper-content aside.widgets .widget .title a {
+  font-size: 12px;
+  color: #3bb9e3;
+  text-decoration: none;
+  position: relative;
+  padding-left: 10px;
+}
+
+div.wrapper-content aside.widgets .widget .title a::before {
+  content: "";
+  left: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #222;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  top: 3px;
 }
